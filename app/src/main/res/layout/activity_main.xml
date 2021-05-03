@@ -155,6 +155,17 @@
         app:layout_constraintTop_toBottomOf="@id/ic_coda"
         app:srcCompat="@drawable/ic_soup" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:background="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/include_content"
+        app:layout_constraintTop_toTopOf="@+id/include_content" />
+
     <include
         android:id="@+id/include_content"
         layout="@layout/cafe_recycler"

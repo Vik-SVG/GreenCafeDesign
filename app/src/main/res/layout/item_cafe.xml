@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="170dp"
-    android:layout_height="100dp"
+    android:id="@+id/relative_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_marginTop="12dp"
     android:layout_marginBottom="12dp">
 
+
     <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/green_background_view"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
         android:layout_marginStart="-30dp"
         android:layout_toEndOf="@id/item_image"
-        android:background="@drawable/rectangle_item_background" />
+        android:background="@color/yellow_olive" />
 
     <ImageView
         android:id="@+id/item_image"
@@ -29,11 +29,52 @@
         android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="false"
+        android:layout_alignEnd="@id/green_background_view"
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@id/item_image"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/neris_semibold"
         android:gravity="center"
-        android:text="Firm text" />
+        android:text="Firm text"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_title"
+        android:layout_alignEnd="@id/green_background_view"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/item_image"
+        android:fontFamily="@font/neris_light"
+        android:gravity="center"
+        android:text="Ham, cheese, greens..."
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/green_background_view"
+        android:layout_alignBottom="@id/green_background_view"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/neris_semibold"
+        android:text="150 uah"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/item_sizes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/green_background_view"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@id/item_price"
+        android:layout_toEndOf="@id/item_image"
+        android:fontFamily="@font/neris_light"
+        android:gravity="center"
+        android:text="50g/200sm"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
 </RelativeLayout>

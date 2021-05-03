@@ -2,6 +2,8 @@ package com.vkpriesniakov.greencafe
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.marginLeft
+import androidx.core.view.marginStart
 import androidx.recyclerview.widget.RecyclerView
 import com.vkpriesniakov.greencafe.databinding.ItemCafeBinding
 
@@ -18,8 +20,16 @@ class CafeAdapter : RecyclerView.Adapter<CafeAdapter.CafeItemsViewHolder>() {
         RecyclerView.ViewHolder(bdnView.root) {
         fun bind(position: Int) {
 
-            bdnView.itemImage.setImageDrawable(allDishes[position].image)
+            if (position % 2 == 1) {
 
+            }
+            bdnView.apply {
+                itemImage.setImageDrawable(allDishes[position].image)
+                itemDescription.text = allDishes[position].description
+                itemPrice.text = allDishes[position].price
+                itemSizes.text = allDishes[position].size
+                itemTitle.text = allDishes[position].title
+            }
         }
     }
 
