@@ -5,8 +5,10 @@
     android:id="@+id/recycler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rectangle_two"
     android:gravity="fill_vertical"
     android:orientation="vertical"
+    android:paddingTop="12dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
@@ -15,7 +17,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/rectangle_two"
-        tools:itemCount="3"
+        android:layout_marginStart="40dp"
+        tools:itemCount="4"
         tools:listitem="@layout/item_cafe" />
 </LinearLayout>

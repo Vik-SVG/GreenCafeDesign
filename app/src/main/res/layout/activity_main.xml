@@ -18,6 +18,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/left_drawer_menu"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
+
+    <View
         android:id="@+id/green_back"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -27,71 +36,124 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/left_drawer_menu"
-        android:layout_width="90dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include_main_app_bar">
+    <ImageView
+        android:id="@+id/ic_burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/left_drawer_menu"
+        app:srcCompat="@drawable/ic_burger" />
 
-        <ImageView
-            android:id="@+id/ic_burger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_burger" />
+    <TextView
+        android:id="@+id/pizza_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Pizza"
+        android:textColor="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_pizza"
+        app:layout_constraintStart_toEndOf="@id/ic_pizza"
+        app:layout_constraintTop_toTopOf="@id/ic_pizza" />
 
-        <ImageView
-            android:id="@+id/ic_cake"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ic_burger"
-            app:srcCompat="@drawable/ic_cake" />
+    <TextView
+        android:id="@+id/shaverma_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Shaverma"
+        android:textColor="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_shaverma"
+        app:layout_constraintStart_toEndOf="@id/ic_shaverma"
+        app:layout_constraintTop_toTopOf="@id/ic_shaverma" />
 
-        <ImageView
-            android:id="@+id/ic_pizza"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ic_cake" />
+    <TextView
+        android:id="@+id/soup_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Soup"
+        android:textColor="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_soup"
+        app:layout_constraintStart_toEndOf="@id/ic_soup"
+        app:layout_constraintTop_toTopOf="@id/ic_soup" />
 
-        <ImageView
-            android:id="@+id/ic_shaverma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ic_pizza" />
+    <TextView
+        android:id="@+id/coda_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Coda"
+        android:textColor="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_coda"
+        app:layout_constraintStart_toEndOf="@id/ic_coda"
+        app:layout_constraintTop_toTopOf="@id/ic_coda" />
 
-        <ImageView
-            android:id="@+id/ic_coda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ic_shaverma" />
+    <TextView
+        android:id="@+id/cake_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Cakes"
+        android:textColor="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="@id/ic_cake"
+        app:layout_constraintStart_toEndOf="@id/ic_cake"
+        app:layout_constraintTop_toTopOf="@id/ic_cake" />
 
-        <ImageView
-            android:id="@+id/ic_soup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ic_coda" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/burgers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Burgers"
+        android:textColor="@color/yellow_back"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_burger"
+        app:layout_constraintStart_toEndOf="@+id/ic_burger"
+        app:layout_constraintTop_toTopOf="@+id/ic_burger" />
+
+    <ImageView
+        android:id="@+id/ic_cake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_burger"
+        app:srcCompat="@drawable/ic_cake" />
+
+    <ImageView
+        android:id="@+id/ic_pizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_cake"
+        app:srcCompat="@drawable/ic_pizza" />
+
+    <ImageView
+        android:id="@+id/ic_shaverma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_pizza"
+        app:srcCompat="@drawable/ic_shaverma" />
+
+    <ImageView
+        android:id="@+id/ic_coda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_shaverma"
+        app:srcCompat="@drawable/ic_soda" />
+
+    <ImageView
+        android:id="@+id/ic_soup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_coda"
+        app:srcCompat="@drawable/ic_soup" />
 
     <include
         android:id="@+id/include_content"

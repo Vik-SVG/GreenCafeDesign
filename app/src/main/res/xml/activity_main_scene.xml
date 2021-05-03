@@ -34,19 +34,131 @@
             motion:layout_constraintTop_toBottomOf="@+id/include_main" />
         <Constraint
             android:id="@+id/include_content"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
             android:layout_width="0dp"
             android:layout_height="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
             motion:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
+        <Constraint
+            android:id="@+id/ic_burger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/left_drawer_menu"
+            motion:layout_constraintTop_toTopOf="@+id/left_drawer_menu" />
+        <Constraint
+            android:id="@+id/ic_cake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_burger" />
+        <Constraint
+            android:id="@+id/ic_pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_cake" />
+        <Constraint
+            android:id="@+id/ic_shaverma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_pizza" />
+        <Constraint
+            android:id="@+id/ic_coda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_shaverma" />
+        <Constraint
+            android:id="@+id/ic_soup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_coda" />
+        <Constraint
+            android:id="@+id/pizza_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@+id/ic_burger"
+            motion:layout_constraintStart_toEndOf="@+id/ic_burger"
+            motion:layout_constraintTop_toTopOf="@+id/ic_burger" />
+        <Constraint
+            android:id="@+id/pizza_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_pizza"
+            motion:layout_constraintStart_toEndOf="@id/ic_pizza"
+            motion:layout_constraintTop_toTopOf="@id/ic_pizza" />
+        <Constraint
+            android:id="@+id/cake_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_cake"
+            motion:layout_constraintStart_toEndOf="@id/ic_cake"
+            motion:layout_constraintTop_toTopOf="@id/ic_cake" />
+        <Constraint
+            android:id="@+id/shaverma_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_shaverma"
+            motion:layout_constraintStart_toEndOf="@id/ic_shaverma"
+            motion:layout_constraintTop_toTopOf="@id/ic_shaverma" />
+        <Constraint
+            android:id="@+id/coda_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_coda"
+            motion:layout_constraintStart_toEndOf="@id/ic_coda"
+            motion:layout_constraintTop_toTopOf="@id/ic_coda" />
+        <Constraint
+            android:id="@+id/soup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_soup"
+            motion:layout_constraintStart_toEndOf="@id/ic_soup"
+            motion:layout_constraintTop_toTopOf="@id/ic_soup" />
+        <Constraint
+            android:id="@+id/burgers_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@+id/ic_burger"
+            motion:layout_constraintStart_toEndOf="@+id/ic_burger"
+            motion:layout_constraintTop_toTopOf="@+id/ic_burger" />
 
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
             android:id="@id/left_drawer_menu"
-            android:layout_width="200dp"
+            android:layout_width="160dp"
             android:layout_height="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -63,12 +175,114 @@
             motion:layout_constraintWidth_percent="1" />
         <Constraint
             android:id="@+id/include_content"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            motion:layout_constraintBottom_toBottomOf="parent"
             android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
             motion:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
+        <Constraint
+            android:id="@+id/ic_burger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/left_drawer_menu" />
+        <Constraint
+            android:id="@+id/ic_soup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_coda" />
+        <Constraint
+            android:id="@+id/ic_cake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_burger" />
+        <Constraint
+            android:id="@+id/ic_pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_cake" />
+        <Constraint
+            android:id="@+id/ic_shaverma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_pizza" />
+        <Constraint
+            android:id="@+id/ic_coda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            motion:layout_constraintEnd_toEndOf="@+id/ic_burger"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/ic_burger"
+            motion:layout_constraintTop_toBottomOf="@id/ic_shaverma" />
+        <Constraint
+            android:id="@+id/pizza_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@+id/ic_pizza"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu"
+            motion:layout_constraintStart_toEndOf="@+id/ic_pizza"
+            motion:layout_constraintTop_toTopOf="@+id/ic_pizza" />
+        <Constraint
+            android:id="@+id/soup_text"
+            motion:layout_constraintStart_toEndOf="@id/ic_soup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_soup"
+            motion:layout_constraintTop_toTopOf="@id/ic_soup"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu" />
+        <Constraint
+            android:id="@+id/coda_text"
+            motion:layout_constraintStart_toEndOf="@id/ic_coda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_coda"
+            motion:layout_constraintTop_toTopOf="@id/ic_coda"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu" />
+        <Constraint
+            android:id="@+id/cake_text"
+            motion:layout_constraintStart_toEndOf="@id/ic_cake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_cake"
+            motion:layout_constraintTop_toTopOf="@id/ic_cake"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu" />
+        <Constraint
+            android:id="@+id/shaverma_text"
+            motion:layout_constraintStart_toEndOf="@id/ic_shaverma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_shaverma"
+            motion:layout_constraintTop_toTopOf="@id/ic_shaverma"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu" />
+        <Constraint
+            android:id="@+id/burgers_text"
+            motion:layout_constraintStart_toEndOf="@+id/ic_burger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/ic_burger"
+            motion:layout_constraintTop_toTopOf="@+id/ic_burger"
+            motion:layout_constraintEnd_toEndOf="@+id/left_drawer_menu" />
     </ConstraintSet>
 </MotionScene>
