@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="250">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:dragScale="0.7"
+            motion:limitBoundsTo="@id/left_drawer_menu"
+            motion:touchAnchorId="@+id/left_drawer_menu"
+            motion:touchAnchorSide="right" />
+        <KeyFrameSet></KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/left_drawer_menu"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
+        <Constraint
+            android:id="@id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.567"
+            motion:layout_constraintStart_toEndOf="@+id/left_button"
+            motion:layout_constraintTop_toBottomOf="@+id/include_main" />
+        <Constraint
+            android:id="@+id/include_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/left_drawer_menu"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/include_main_app_bar" />
+        <Constraint
+            android:id="@id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            motion:layout_constraintLeft_toRightOf="@+id/left_drawer_menu"
+            motion:layout_constraintTop_toBottomOf="@id/include_main_app_bar"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1" />
+        <Constraint
+            android:id="@+id/include_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/left_drawer_menu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/include_main_app_bar" />
+    </ConstraintSet>
+</MotionScene>
