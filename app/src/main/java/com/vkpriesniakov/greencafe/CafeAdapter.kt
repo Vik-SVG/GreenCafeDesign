@@ -2,6 +2,7 @@ package com.vkpriesniakov.greencafe
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import androidx.core.view.marginLeft
 import androidx.core.view.marginStart
 import androidx.recyclerview.widget.RecyclerView
@@ -20,8 +21,10 @@ class CafeAdapter : RecyclerView.Adapter<CafeAdapter.CafeItemsViewHolder>() {
         RecyclerView.ViewHolder(bdnView.root) {
         fun bind(position: Int) {
 
-            if (position % 2 == 1) {
-
+            if (position % 2 == 0) {
+                val params = this.itemView.layoutParams as RecyclerView.LayoutParams
+                params.marginStart = 40
+                this.itemView.layoutParams = params
             }
             bdnView.apply {
                 itemImage.setImageDrawable(allDishes[position].image)
